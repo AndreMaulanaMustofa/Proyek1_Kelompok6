@@ -179,22 +179,32 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <script>
+                                        function sum() {
+                                            var txtFirstNumberValue = document.getElementById('txt1').value;
+                                            var txtSecondNumberValue = document.getElementById('txt2').value;
+                                            var result = parseInt(txtFirstNumberValue) * parseInt(txtSecondNumberValue);
+                                            if (!isNaN(result)) {
+                                                document.getElementById('txt3').value = result + ('.000');
+                                            }
+                                        }
+                                    </script>
                                     <td class="shoping__cart__item">
                                         <img src="img/featured/feature-2.jpg" alt="" style="width: 100px; height: 100px;">
                                         <h5>God Game VOL.1</h5>
                                     </td>
                                     <td class="shoping__cart__price">
-                                        Rp 120.000
+                                        <input type="text" id="txt2" value="120.000" onkeyup="sum()">
                                     </td>
                                     <td class="shoping__cart__quantity">
                                         <div class="quantity">
                                             <div class="pro-qty">
-                                                <input type="text" value="1">
+                                                <input type="text" value="1" id="txt1" onkeyup="sum()">
                                             </div>
                                         </div>
                                     </td>
                                     <td class="shoping__cart__total">
-                                        Rp 120.000
+                                        <input type="text" id="txt3">
                                     </td>
                                     <td class="shoping__cart__item__close">
                                         <span class="icon_close"></span>
