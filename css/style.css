@@ -1411,6 +1411,10 @@ ol {
 	margin-right: 12px;
 }
 
+.owl-dots{
+	visibility: hidden;
+}
+
 .product__discount__slider.owl-carousel .owl-dots button.active {
 	background: #707070;
 	border-color: #6f6f6f;
